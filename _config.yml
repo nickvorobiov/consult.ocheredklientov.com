@@ -1,0 +1,24 @@
+baseurl: ""
+url: "http://consult.ocheredklientov.com"
+markdown: kramdown
+exclude:
+  - node_modules
+  - package.json
+  - README.md
+  - gulpfile.js
+  - deploy
+  - deploy-key.enc
+  - deploy-key
+
+title: "Помогу привлечь 10 клиентов за две недели"
+description: "Предлагаю тебе упаковать своё предложение и быстро привлечь первых клиентов. Дам конкретные задания и рекомендации, которые позволят прямо сейчас получить деньги. Пойдёшь и используешь, получишь 5 клиентов в свой бизнес. На каждом шаге получаешь обратную связь. Действуем до результата, даже если не получится сразу, будем пробовать ещё."
+keywords: "бизнес, стартап, тестирование ниши, выбор ниши, предприниматель, запуск"
+author: "Николай Воробьёв"
+
+permalink: /:title/
+
+#vk_app_id: 0
+yandex_metrika: 40930664 # consult.ocheredklientov.com
+google_analytics: UA-46456269-28 # consult.ocheredklientov.com
+facebook_pixel_id: 1064201373633710
+vk_retarget_url: '//vk.com/rtrg?r=qSCN5rX0b39GdbKEaJbtNchsKslPsUSfOzejJPylaW3etTy6uz17Lp*L5l20G/zt36cM6*xS7TcuDYOw5NpO3PYCMr6DXAJ8DjmyeT39VoDwVIw9ErCQ4UZ/Y*eHdCvo1iC4pvpGBvyom3dz0zTyG*Z0SZB8yOkVtTK6D2w22i4-&pixel_id=1000042657'
