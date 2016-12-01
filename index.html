@@ -95,12 +95,83 @@ layout: base
 
             <input type="hidden" name="field[1]" data-field="roistat" value="" />
             <input type="hidden" name="field[2]" data-field="traffic_source" value="" />
-            <input type="hidden" name="field[3]" data-field="trello-list-id" value="582bf38c12fa7397b4e88013" />
+            <input type="hidden" name="field[3]" data-field="trello-list-id" value="582dff7c3b8cc8c719d654f5" />
             <input type="hidden" name="field[4]" data-field="referer" value="" />
+
+            <input type="hidden" name="field[7]" data-field="offer" value="Бесплатная консультация по привлечению клиентов" />
+
+            <div class="form-group">
+              <label>Чем занят?</label>
+              <div class="help-block with-errors"></div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[5]" data-field="occupation" value="Работаю по найму">
+                  <span class="custom-control-indicator"></span>
+                  Работаю по найму, хочу запустить бизнес
+                </label>
+              </div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[5]" data-field="occupation" value="Работаю на себя">
+                  <span class="custom-control-indicator"></span>
+                  Работаю на себя, хочу больше заказов
+                </label>
+              </div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[5]" data-field="occupation" value="Есть работающий бизнес">
+                  <span class="custom-control-indicator"></span>
+                  Есть работающий бизнес, хочу больше прибыли
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Уровень дохода</label>
+              <div class="help-block with-errors"></div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[6]" data-field="income" value="0-40">
+                  <span class="custom-control-indicator"></span>
+                  до 40 000 рублей в месяц
+                </label>
+              </div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[6]" data-field="income" value="40-70">
+                  <span class="custom-control-indicator"></span>
+                  от 40 000 до 70 000 рублей в месяц
+                </label>
+              </div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[6]" data-field="income" value="70-100">
+                  <span class="custom-control-indicator"></span>
+                  от 70 000 до 100 000 рублей в месяц
+                </label>
+              </div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[6]" data-field="income" value="100-300">
+                  <span class="custom-control-indicator"></span>
+                  от 100 000 до 300 000 рублей в месяц
+                </label>
+              </div>
+              <div class="radio custom-control custom-radio">
+                <label>
+                  <input required="required" type="radio" name="field[6]" data-field="income" value="300plus">
+                  <span class="custom-control-indicator"></span>
+                  от 300 000 рублей в месяц
+                </label>
+              </div>
+            </div>
 
             <div class="form-group">
               <label for="input-name" class="control-label">Имя Фамилия</label>
               <input id="input-name" required="required" name="fullname" type="text" class="form-control" placeholder="Иван Иванов">
+            </div>
+            <div class="form-group">
+              <label for="input-phone" class="control-label">Телефон</label>
+              <input id="input-phone" required="required" name="phone" type="text" class="form-control" placeholder="+7 (921) 765-43-21">
             </div>
             <div class="form-group">
               <label for="input-email" class="control-label">Электронная почта</label>
@@ -137,3 +208,20 @@ layout: base
 </div>
 
 <p class="text-center">ООО Реальность, +7 921 7618506 Санкт-Петербург, ул. Некрасова 40 ok@nickvorobiov.com <a href="http://soedinennost.com/privacy">Политика конфиденциальности</a></p>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('input[type=radio]').change(function() {
+    var occupation = $('input[data-field=occupation]:checked').val();
+    var income = $('input[data-field=income]:checked').val();
+
+    if (income == '0-40') {
+      $('input[data-field=list-id]').val('37');
+      console.log('Нецелевой');
+    } else {
+      $('input[data-field=list-id]').val('17');
+      console.log('Целевой');
+    }
+  });
+});
+</script>
